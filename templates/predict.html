@@ -1,0 +1,196 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<form action="" method="post">
+    {{ form.hidden_tag() }}
+    <div>
+        {{ form.gender.label }}
+        {{ form.gender }}
+        {% if form.gender.errors %}
+            {% for error in form.gender.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.SeniorCitizen.label }}
+        {{ form.SeniorCitizen }}
+        {% if form.SeniorCitizen.errors %}
+            {% for error in form.SeniorCitizen.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.Partner.label }}
+        {{ form.Partner }}
+        {% if form.Partner.errors %}
+            {% for error in form.Partner.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.Dependents.label }}
+        {{ form.Dependents }}
+        {% if form.Dependents.errors %}
+            {% for error in form.Dependents.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.tenure.label }}
+        {{ form.tenure }}
+        {% if form.tenure.errors %}
+            {% for error in form.tenure.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.PhoneService.label }}
+        {{ form.PhoneService }}
+        {% if form.PhoneService.errors %}
+            {% for error in form.PhoneService.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.MultipleLines.label }}
+        {{ form.MultipleLines }}
+        {% if form.MultipleLines.errors %}
+            {% for error in form.MultipleLines.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.InternetService.label }}
+        {{ form.InternetService }}
+        {% if form.InternetService.errors %}
+            {% for error in form.InternetService.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.OnlineSecurity.label }}
+        {{ form.OnlineSecurity }}
+        {% if form.OnlineSecurity.errors %}
+            {% for error in form.OnlineSecurity.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.OnlineBackup.label }}
+        {{ form.OnlineBackup }}
+        {% if form.OnlineBackup.errors %}
+            {% for error in form.OnlineBackup.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.DeviceProtection.label }}
+        {{ form.DeviceProtection }}
+        {% if form.DeviceProtection.errors %}
+            {% for error in form.DeviceProtection.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.TechSupport.label }}
+        {{ form.TechSupport }}
+        {% if form.TechSupport.errors %}
+            {% for error in form.TechSupport.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.StreamingTV.label }}
+        {{ form.StreamingTV }}
+        {% if form.StreamingTV.errors %}
+            {% for error in form.StreamingTV.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.StreamingMovies.label }}
+        {{ form.StreamingMovies }}
+        {% if form.StreamingMovies.errors %}
+            {% for error in form.StreamingMovies.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.Contract.label }}
+        {{ form.Contract }}
+        {% if form.Contract.errors %}
+            {% for error in form.Contract.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.PaperlessBilling.label }}
+        {{ form.PaperlessBilling }}
+        {% if form.PaperlessBilling.errors %}
+            {% for error in form.PaperlessBilling.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.MonthlyCharges.label }}
+        {{ form.MonthlyCharges }}
+        {% if form.MonthlyCharges.errors %}
+            {% for error in form.MonthlyCharges.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.TotalCharges.label }}
+        {{ form.TotalCharges }}
+        {% if form.TotalCharges.errors %}
+            {% for error in form.TotalCharges.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>{{ form.submit() }}</div>
+    <br>
+    <div>
+        {{ output }}
+    </div>
+    <br>
+    <div>
+        <p>Redirect to Homepage? <a href="{{ url_for('home') }}">Home</a></p>
+    </div>
+</form>
+{% endblock content %}
